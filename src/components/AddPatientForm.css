@@ -1,0 +1,145 @@
+/* === ADD PATIENT FORM - CORPORATE FINAL === */
+
+.add-patient-form {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+/* Close button Top Right */
+.close-btn {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  border: none;
+  background: #E53935;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 4px 10px;
+  border-radius: 50px;
+  font-size: 16px;
+  z-index: 10;
+}
+.close-btn:hover {
+  background: #C62828;
+}
+
+/* Title */
+.add-patient-form h3 {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 10px;
+  color: #233B93;
+}
+
+/* Grid Layout */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+/* Full width fields */
+.form-group:nth-child(3),
+.form-group:nth-child(4),
+.form-group:nth-child(7) {
+  grid-column: 1 / -1;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #233B93;
+}
+
+.form-group input,
+.form-group select {
+  border-radius: 10px;
+  border: 1px solid #C0C7D6;
+  padding: 12px;
+  font-size: 14px;
+  transition: .2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #233B93;
+  box-shadow: 0 0 0 3px rgba(35,59,147,.15);
+  outline: none;
+}
+
+/* Actions */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding-top: 18px;
+  border-top: 1px solid #DFE3EB;
+}
+
+.btn-cancel,
+.btn-submit {
+  border: none;
+  font-weight: 700;
+  padding: 10px 22px;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Cancel */
+.btn-cancel {
+  background: #6C757D;
+  color: white;
+}
+.btn-cancel:hover {
+  background: #5A6268;
+}
+
+/* Submit */
+.btn-submit {
+  background: #233B93;
+  color: white;
+}
+.btn-submit:hover:not(:disabled) {
+  background: #1D2E78;
+  transform: translateY(-2px);
+}
+.btn-submit:disabled {
+  background: #CBD1E0;
+  cursor: not-allowed;
+}
+
+/* Error Box */
+.form-error {
+  background: #FDE2E4;
+  border: 1px solid #F5A3A8;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  text-align: center;
+  color: #8A1F23;
+}
+
+/* Responsive */
+@media (max-width: 620px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-group:nth-child(3),
+  .form-group:nth-child(4),
+  .form-group:nth-child(7) {
+    grid-column: auto;
+  }
+}

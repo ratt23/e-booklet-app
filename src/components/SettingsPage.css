@@ -1,0 +1,95 @@
+.settings-card {
+  background: #ffffff;
+  padding: 26px 30px;
+  border-radius: 14px;
+  box-shadow: 0 3px 16px rgba(0,0,0,0.05);
+  border: 1px solid #E4E8F2;
+}
+
+.settings-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #233B93;
+  margin-bottom: 18px;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #233B93;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.settings-input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #C0C7D6;
+  margin-bottom: 22px;
+  font-size: 14px;
+}
+.settings-input:focus {
+  border-color: #233B93;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(35,59,147,.15);
+}
+
+.btn-save {
+  background: #233B93;
+  color: #ffffff;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s;
+}
+.btn-save:hover:not(:disabled) {
+  background: #1D2E78;
+  transform: translateY(-2px);
+}
+.btn-save:disabled {
+  background: #CBD1E0;
+}
+
+/* LOADING */
+.loading-settings {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid rgba(0,0,0,0.2);
+  border-top: 3px solid #233B93;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.error-box,
+.success-box {
+  padding: 14px;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.error-box {
+  background: #FDE2E4;
+  color: #8A1F23;
+  border: 1px solid #F5A3A8;
+}
+.success-box {
+  background: #D8F5D2;
+  color: #0B582A;
+  border: 1px solid #ABDBB0;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

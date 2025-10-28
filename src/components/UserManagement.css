@@ -1,0 +1,429 @@
+/* ===== USER MANAGEMENT PAGE - FINAL CORPORATE UI ===== */
+
+.user-management {
+  background: #ffffff;
+  padding: 22px 26px;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+/* HEADER */
+.user-management-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #E4E8F2;
+}
+
+.user-management-header h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #233B93;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.user-management-header p {
+  margin: 3px 0 0 0;
+  font-size: 13px;
+  font-weight: 500;
+  color: #687499;
+}
+
+/* + Tambah User Baru */
+.btn-add-user {
+  background: #233B93;
+  color: #fff;
+  padding: 10px 16px;
+  font-weight: 700;
+  font-size: 13px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: 0.25s;
+}
+.btn-add-user:hover {
+  background: #1B2E78;
+  transform: translateY(-2px);
+}
+
+/* TABLE CONTAINER */
+.users-table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* TABLE STYLE */
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Sticky Header */
+.users-table th {
+  position: sticky;
+  top: 0;
+  background: #233B93;
+  color: #ffffff;
+  height: 48px;
+  padding: 14px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  z-index: 10;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.users-table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #E0E4ED;
+  font-size: 14px;
+  color: #273160;
+  vertical-align: middle;
+}
+
+.users-table tbody tr:nth-child(even) {
+  background: #F8FAFF;
+}
+
+.users-table tbody tr:hover {
+  background: #EBF2FF;
+}
+
+.current-user {
+  background: #fff6d2 !important;
+}
+
+/* USERNAME + YOU BADGE */
+.username-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.you-badge {
+  background: #FFCF0B;
+  padding: 3px 6px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #272727;
+}
+
+/* ROLE BADGES */
+.role-badge {
+  padding: 6px 10px;
+  border-radius: 14px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.role-admin {
+  background: #D8F5D2;
+  color: #0B582A;
+}
+.role-admin_poc {
+  background: #D7E4FF;
+  color: #1D2E78;
+}
+.role-exporter {
+  background: #FFF3C2;
+  color: #7A5F00;
+}
+
+.role-description {
+  font-size: 12px;
+  color: #67708F;
+  margin-top: 3px;
+}
+
+/* STATUS BADGE */
+.status-badge {
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.status-active {
+  background: #D8F5D2;
+  color: #0B582A;
+}
+.status-inactive {
+  background: #FDE2E4;
+  color: #A12727;
+}
+
+/* PERMISSIONS LIST TEXT */
+.permissions-cell {
+  font-size: 12px;
+  line-height: 1.4;
+  max-width: 240px;
+  color: #3F4968;
+}
+
+/* ACTIONS */
+.action-buttons {
+  display: flex;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.btn-action {
+  padding: 8px 12px;
+  font-size: 13px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+/* Edit Password */
+.btn-edit-password {
+  background: #233B93;
+}
+.btn-edit-password:hover {
+  background: #1B2E78;
+}
+
+/* Edit Role */
+.btn-edit-role {
+  background: #FFCF0B;
+  color: #233B93;
+}
+.btn-edit-role:hover {
+  background: #1d2f75;
+  color: white;
+}
+
+/* Toggle Active */
+.btn-toggle-status {
+  background: #6C757D;
+}
+.btn-toggle-status:hover {
+  background: #495057;
+}
+
+/* Delete User */
+.btn-delete-user {
+  background: #E53935;
+}
+.btn-delete-user:hover {
+  background: #C62828;
+}
+
+/* Disabled */
+.btn-action:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* MESSAGE BOXES */
+.error-message,
+.success-message {
+  border-radius: 8px;
+  padding: 14px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.error-message {
+  background: #FDE2E4;
+  color: #8A1F23;
+  border: 1px solid #F5A3A8;
+}
+
+.success-message {
+  background: #D8F5D2;
+  color: #0B582A;
+  border: 1px solid #ABDBB0;
+}
+
+/* MODAL BASE */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 60px;
+}
+
+.modal-content {
+  width: 100%;
+  max-width: 550px;
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.15);
+  animation: fadeIn .25s ease;
+}
+
+.modal-content h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #233B93;
+  margin-bottom: 12px;
+}
+
+.user-info-modal {
+  background: #F4F7FB;
+  padding: 10px 14px;
+  border-radius: 10px;
+  margin-bottom: 14px;
+}
+
+.modal-content .form-group {
+  margin-bottom: 18px;
+}
+
+.modal-content .form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+  color: #233B93;
+}
+
+.modal-content .form-group input,
+.modal-content .form-group select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #C0C7D6;
+  font-size: 14px;
+  transition: .2s;
+}
+
+.modal-content .form-group input:focus,
+.modal-content .form-group select:focus {
+  border-color: #233B93;
+  box-shadow: 0 0 0 3px rgba(35,59,147,0.15);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.btn-cancel {
+  background: #6C757D;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+}
+.btn-cancel:hover {
+  background: #5A6268;
+}
+
+.btn-submit {
+  background: #233B93;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+}
+.btn-submit:hover {
+  background: #1B2E78;
+  transform: translateY(-2px);
+}
+
+/* === DANGER ZONE === */
+.danger-zone {
+  margin-top: 4px;
+  border-radius: 14px;
+  border: 2px solid #E53935;
+  background: #FFF4F4;
+}
+
+.danger-zone h4 {
+  background: #E53935;
+  color: white;
+  margin: 0;
+  padding: 14px 16px;
+  border-radius: 12px 12px 0 0;
+  font-size: 16px;
+}
+
+.danger-zone .danger-action {
+  padding: 18px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.danger-info strong {
+  font-size: 15px;
+  color: #8A1F23;
+}
+.danger-info span {
+  font-size: 13px;
+  color: #7A3030;
+  opacity: 0.8;
+}
+
+/* Tombol Danger */
+.btn-danger,
+.btn-submit-danger {
+  background: #E53935;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.btn-danger:hover,
+.btn-submit-danger:hover:not(:disabled) {
+  background: #C62828;
+  transform: translateY(-2px);
+}
+
+/* INPUT KONFIRMASI DANGER */
+.danger-modal .form-group input {
+  border-color: #E53935;
+  font-weight: 600;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .form-actions {
+    flex-direction: column;
+  }
+  .btn-cancel,
+  .btn-submit {
+    width: 100%;
+    justify-content: center;
+  }
+}

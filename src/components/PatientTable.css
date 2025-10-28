@@ -1,0 +1,176 @@
+/* === TABLE WRAPPER === */
+.patient-table-container {
+  width: 100%;
+  overflow-x: auto;
+  background: #ffffff;
+}
+
+/* === TABLE === */
+.patient-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* === STICKY HEADER === */
+.patient-table thead th {
+  position: sticky;
+  top: 0;
+  background: #233B93;
+  color: #ffffff;
+  padding: 14px 12px;
+  height: 46px;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+/* === TABLE DATA === */
+.patient-table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #E4E8F2;
+  font-size: 14px;
+  color: #273160;
+  vertical-align: middle;
+}
+
+/* Zebra effect */
+.patient-table tbody tr:nth-child(even) {
+  background: #F8FAFF;
+}
+
+/* Row hover highlight */
+.patient-table tbody tr:hover {
+  background: #EDF2FF;
+}
+
+/* === STATUS BADGE === */
+.status-badge {
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status-badge.approved {
+  background: #DEF4E3;
+  color: #0B582A;
+}
+
+.status-badge.waiting {
+  background: #FFF3C2;
+  color: #7A5F00;
+}
+
+.status-badge.rejected {
+  background: #FDE2E4;
+  color: #A72727;
+}
+
+/* === JADWAL SUBTEXT === */
+.table-time {
+  font-size: 12px;
+  color: #5C688A;
+  margin-top: 4px;
+}
+
+/* === ACTION BUTTON GROUP === */
+.table-actions {
+  display: flex;
+  gap: 8px;
+  min-width: 350px;
+}
+
+/* === ACTION BUTTONS === */
+.btn-action {
+  border: none;
+  background: #233B93;
+  color: #ffffff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Hover – Action Buttons */
+.btn-action:hover:not(:disabled) {
+  transform: translateY(-2px);
+  background: #1B2E78;
+}
+
+/* Copy Button Highlight */
+.btn-copy.copied {
+  background: #4CAF50 !important;
+}
+
+/* WhatsApp */
+.btn-wa {
+  background: #1F8E44;
+}
+.btn-wa:hover:not(:disabled) {
+  background: #1B7639;
+}
+
+/* Edit */
+.btn-edit {
+  background: #FFCF0B;
+  color: #233B93;
+}
+.btn-edit:hover {
+  background: #233B93;
+  color: #ffffff;
+}
+
+/* Delete */
+.btn-del {
+  background: #E53935;
+}
+.btn-del:hover {
+  background: #C62828;
+}
+
+/* Disabled */
+.btn-action:disabled {
+  background: #AAAAAA;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* === NO DATA === */
+.no-data {
+  padding: 40px 0;
+  text-align: center;
+  font-style: italic;
+  font-size: 14px;
+  color: #8D9BB6;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+  .patient-table thead th,
+  .patient-table td {
+    font-size: 12px;
+    padding: 10px 8px;
+  }
+  .table-actions {
+    min-width: 280px;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Hanya icon saat mobile */
+  .btn-action span {
+    display: none;
+  }
+}
